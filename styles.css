@@ -135,6 +135,7 @@ h4 {
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
+    align-content: center;
 }
 
 .view-projects-btn:hover {
