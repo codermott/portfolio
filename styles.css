@@ -13,6 +13,26 @@ body {
   color: #333;
 }
 
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
 /* Navigation Bar */
 nav {
   display: flex;
@@ -40,7 +60,7 @@ nav {
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -117,6 +137,7 @@ nav {
   opacity: 0; /* Start as invisible */
   transform: translateY(50px); /* Start slightly below */
   transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+  align-content: center;
 }
 
 .projects.visible {
@@ -132,6 +153,7 @@ nav {
 
 .view-projects-btn {
   width: 150px;
+  height: 6vh;
   grid-area: button;
   justify-self: end; /* Aligns the button to the right within its grid cell */
   display: inline-block;
@@ -144,6 +166,7 @@ nav {
   border-radius: 2em;
   text-align: center;
   align-content: center;
+  margin: auto;
 }
 
 .view-projects-btn:hover {
