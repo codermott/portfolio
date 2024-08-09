@@ -52,7 +52,7 @@ nav {
 }
 
 .hero h1 {
-  width: 50%;
+  max-width: 1000px;
 }
 
 /* Canvas for Polygons */
@@ -74,8 +74,9 @@ nav {
 /*intro*/
 .intro {
   text-align: center;
-  padding: 2em;
-  width: 50%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -93,9 +94,9 @@ nav {
 /*projects*/
 .project-section {
   background: linear-gradient(120deg, #a47963, #a58f6f, #a6a57a);
-  padding: 2em;
   padding-top: 4em;
   color: white;
+  margin: auto;
 }
 
 .project-section h2 {
@@ -109,7 +110,7 @@ nav {
   gap: 1rem;
   padding-bottom: 2rem;
   grid-template-areas: "title button" "description description";
-  width: 50%;
+  max-width: 1000px;
   margin: auto;
   margin-bottom: 2vw;
   border-bottom: 2px solid rgb(252, 163, 17);
@@ -130,13 +131,14 @@ nav {
 }
 
 .view-projects-btn {
-  width: 30%;
+  width: 150px;
   grid-area: button;
   justify-self: end; /* Aligns the button to the right within its grid cell */
   display: inline-block;
-  background-color: #ff6f61;
+  background-color: #203A43;
   color: #ffffff;
   border: none;
+  padding: 0.5em;
   cursor: pointer;
   text-decoration: none;
   border-radius: 2em;
@@ -145,7 +147,7 @@ nav {
 }
 
 .view-projects-btn:hover {
-  background-color: #ff4f41;
+  background-color: #703D57;
 }
 
 .description {
@@ -183,6 +185,11 @@ footer {
     opacity: 1; /* Optional: End fully visible */
   }
 }
+@media (max-width: 1270px) {
+  .projects, .intro, .hero h1 {
+    width: 90%;
+  }
+}
 @media (max-width: 768px) {
   .nav-links li {
     display: block;
@@ -191,8 +198,5 @@ footer {
   }
   .nav-links {
     text-align: center;
-  }
-  .projects, .intro, .hero h1 {
-    width: 90%;
   }
 }/*# sourceMappingURL=styles.css.map */
