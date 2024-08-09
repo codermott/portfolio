@@ -1,3 +1,4 @@
+/*--particles--*/
 const canvas = document.getElementById('polygon-canvas');
 const ctx = canvas.getContext('2d');
 
@@ -42,7 +43,7 @@ for (let i = 0; i < numParticles; i++) {
     const x = Math.random() * canvas.width;
     const y = Math.random() * canvas.height;
     const radius = Math.random() * 3 + 1;
-    const color = `rgba(255, 255, 255, ${Math.random() * 0.5 + 0.5})`;
+    const color = `rgba(252, 163, 17, ${Math.random() * 0.5 + 0.5})`;
     particles.push(new Particle(x, y, radius, color));
 }
 
@@ -55,7 +56,7 @@ function connectParticles() {
 
             if (distance < connectionDistance) {
                 ctx.beginPath();
-                ctx.strokeStyle = `rgba(255, 255, 255, ${1 - distance / connectionDistance})`;
+                ctx.strokeStyle = `rgba(252, 163, 17, ${1 - distance / connectionDistance})`;
                 ctx.lineWidth = 0.5;
                 ctx.moveTo(particles[i].x, particles[i].y);
                 ctx.lineTo(particles[j].x, particles[j].y);
@@ -80,4 +81,26 @@ animate();
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+});
+
+/*--slide in animation--*/
+document.addEventListener('DOMContentLoaded', () => {
+    const projects = document.querySelectorAll('.projects');
+    const info = document.querySelectorAll('.info');
+    
+    
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing after it becomes visible
+            }
+        });
+    }, {
+        threshold: 0.1 // Adjust the threshold if needed
+    });
+
+    projects.forEach(project => observer.observe(project));
+    info.forEach(info => observer.observe(info));
 });

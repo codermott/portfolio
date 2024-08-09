@@ -1,181 +1,198 @@
 /* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Body Styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 /* Navigation Bar */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
 }
 
 .nav-links {
-    list-style: none;
+  list-style: none;
 }
 
 .nav-links li {
-    display: inline;
-    margin-left: 20px;
+  display: inline;
+  margin-left: 20px;
 }
 
 .nav-links a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
-h1 {
-    font-size: 5em;
-}
-h2 {
-    font-size: 4em;
-}
-h3 {
-    font-size: 2em;
-}
-h4 {
-    font-size: 2em;
-}
+
 /* Hero Section */
 .hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-    overflow: hidden;
-    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+}
+
+.hero h1 {
+  width: 50%;
 }
 
 /* Canvas for Polygons */
 #polygon-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 /* Hero Text Content */
 .hero h1,
-.hero p,
-.cta-btn {
-    z-index: 1;
+.hero p {
+  z-index: 1;
 }
 
-.cta-btn {
-    background-color: #ff6f61;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    margin-top: 20px;
-}
-
-.cta-btn:hover {
-    background-color: #ff4f41;
-}
 /*intro*/
 .intro {
-    text-align: center;
-    padding: 10px;
+  text-align: center;
+  padding: 2em;
+  width: 50%;
+  margin: auto;
 }
+
+.info {
+  opacity: 0; /* Start as invisible */
+  transform: translateY(50px); /* Start slightly below */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+.info.visible {
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Move to final position */
+}
+
 /*projects*/
 .project-section {
-    background: linear-gradient(to top left, #0adb49, #ff4f41);
-    padding: 10px;
+  background: linear-gradient(120deg, #a47963, #a58f6f, #a6a57a);
+  padding: 2em;
+  padding-top: 4em;
+  color: white;
 }
+
+.project-section h2 {
+  text-align: center;
+}
+
 .projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 1rem;
-    padding-bottom: 2rem;
-    grid-template-areas: 
-        "title button"
-        "description description";
-    width: 60%;
-    margin: 2em auto;
-    border-bottom: 2px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  padding-bottom: 2rem;
+  grid-template-areas: "title button" "description description";
+  width: 50%;
+  margin: auto;
+  margin-bottom: 2vw;
+  border-bottom: 2px solid rgb(252, 163, 17);
+  opacity: 0; /* Start as invisible */
+  transform: translateY(50px); /* Start slightly below */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+.projects.visible {
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Move to final position */
 }
 
 .projects h2 {
-    grid-area: title;
-    align-self: center; /* Centers vertically if needed */
+  grid-area: title;
+  align-self: center; /* Centers vertically if needed */
+  color: rgb(252, 163, 17);
 }
 
 .view-projects-btn {
-    width: 30%;
-    grid-area: button;
-    justify-self: end; /* Aligns the button to the right within its grid cell */
-    display: inline-block;
-    background-color: #ff6f61;
-    color: #fff;
-    padding: 5px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    align-content: center;
+  width: 30%;
+  grid-area: button;
+  justify-self: end; /* Aligns the button to the right within its grid cell */
+  display: inline-block;
+  background-color: #ff6f61;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 2em;
+  text-align: center;
+  align-content: center;
 }
 
 .view-projects-btn:hover {
-    background-color: #ff4f41;
+  background-color: #ff4f41;
 }
 
 .description {
-    grid-area: description;
-    margin-top: 1rem;
+  grid-area: description;
+  margin-top: 1rem;
 }
-
-
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
 }
 
 .social-links a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
 .social-links a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links li {
-        display: block;
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    .nav-links {
-        text-align: center;
-    }
+/*animation*/
+@keyframes fadeInFromBottom {
+  from {
+    transform: translateY(100%); /* Start from below the viewport */
+    opacity: 0; /* Optional: Start with hidden */
+  }
+  to {
+    transform: translateY(0); /* End at its normal position */
+    opacity: 1; /* Optional: End fully visible */
+  }
 }
+@media (max-width: 768px) {
+  .nav-links li {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .nav-links {
+    text-align: center;
+  }
+  .projects, .intro, .hero h1 {
+    width: 90%;
+  }
+}/*# sourceMappingURL=styles.css.map */
