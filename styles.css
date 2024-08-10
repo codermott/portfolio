@@ -182,11 +182,13 @@ nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
+  margin: 10px;
 }
 
 .grid-item {
   overflow: hidden;
-  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px black;
 }
 
 .grid-item img {
