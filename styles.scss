@@ -8,64 +8,74 @@ $accent-color: rgb(252, 163, 17);
 $accent-color2: #40F99B;
 
 
+
 /* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Body Styles */
-body {
+  }
+  
+  /* Body Styles */
+  body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-
-}
-
-h1 {
+  }
+  
+  h1 {
     font-size: 4rem;
-}
-h2 {
+  }
+  
+  h2 {
     font-size: 3rem;
-}
-h3 {
+  }
+  
+  h3 {
     font-size: 2rem;
-}
-h4{
+  }
+  
+  h4 {
     font-size: 1.5rem;
-}
-p{
+  }
+  
+  p {
     font-size: 1rem;
-}
-
-/* Navigation Bar */
-nav {
+  }
+  
+  /* Navigation Bar */
+  nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
     background-color: #333;
     color: #fff;
     padding: 1rem;
-}
-
-.nav-links {
+  }
+  
+  .nav-links {
     list-style: none;
-}
-
-.nav-links li {
+  }
+  
+  .nav-links li {
     display: inline;
     margin-left: 20px;
-}
-
-.nav-links a {
+  }
+  
+  .nav-links a {
     color: #fff;
     text-decoration: none;
-}
-
-/* Hero Section */
-.hero {
+  }
+  
+  .logo a {
+    color: #fff; /* Set text color to white */
+    text-decoration: none; /* Remove underline from the link */
+    font-weight: bold; /* Optional: make the text bold */
+  }
+  
+  /* Hero Section */
+  .hero {
     position: relative;
     min-height: 80vh;
     display: flex;
@@ -76,167 +86,266 @@ nav {
     text-align: center;
     overflow: hidden;
     background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-}
-.hero h1 {
+  }
+  
+  .hero h1 {
     max-width: 1000px;
-}
-
-/* Canvas for Polygons */
-#polygon-canvas {
+  }
+  header#secondary-hero {
+    min-height: 40vh !important;
+  }
+  
+  /* Canvas for Polygons */
+  #polygon-canvas {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
-}
-
-/* Hero Text Content */
-.hero h1,
-.hero p {
+  }
+  
+  /* Hero Text Content */
+  .hero h1,
+  .hero p {
     z-index: 1;
-}
-
-/*intro*/
-.intro {
+  }
+  
+  /*intro*/
+  .intro {
     text-align: center;
     padding-top: 2em;
     padding-bottom: 2em;
     max-width: 1000px;
     margin: auto;
-}
-
-.info {
+  }
+  
+  .info {
     opacity: 0; /* Start as invisible */
     transform: translateY(50px); /* Start slightly below */
     transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
-}
-.info.visible {
+  }
+  
+  .info.visible {
     opacity: 1; /* Make visible */
     transform: translateY(0); /* Move to final position */
-}
-
-
-
-/*projects*/
-.project-section {
+  }
+  
+  /*projects*/
+  .project-section {
     background: linear-gradient(120deg, #a47963, #a58f6f, #a6a57a);
     padding-top: 4em;
     color: white;
     margin: auto;
-    
-    
-}
-
-.project-section h2 {
+    padding-bottom: 2rem;
+  }
+  
+  .project-section h2 {
     text-align: center;
-}
-.projects {
+  }
+  
+  .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 1rem;
     padding-bottom: 2rem;
-    grid-template-areas: 
-        "title button"
-        "description description";
+    grid-template-areas: "title button" "description description";
     max-width: 1000px;
     margin: auto;
-    margin-bottom: 2vw;
     border-bottom: 2px solid rgb(252, 163, 17);
     opacity: 0; /* Start as invisible */
     transform: translateY(50px); /* Start slightly below */
     transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
-}
-
-.projects.visible {
+    align-content: center;
+  }
+  
+  .projects.visible {
     opacity: 1; /* Make visible */
     transform: translateY(0); /* Move to final position */
-}
-
-.projects h2 {
+  }
+  
+  .projects h2 {
     grid-area: title;
     align-self: center; /* Centers vertically if needed */
-    color: $accent-color;
-}
-
-.view-projects-btn {
+    color: rgb(252, 163, 17);
+  }
+  #web-projects {
+    margin-bottom: 2rem;
+  }
+  
+  .view-projects-btn {
     width: 150px;
+    height: 6vh;
     grid-area: button;
     justify-self: end; /* Aligns the button to the right within its grid cell */
     display: inline-block;
-    background-color: $secondary-color;
+    background-color: #203A43;
     color: #ffffff;
     border: none;
-    padding: .5em;
+    padding: 0.5em;
     cursor: pointer;
     text-decoration: none;
     border-radius: 2em;
     text-align: center;
     align-content: center;
-}
-
-.view-projects-btn:hover {
-    background-color: $third-color;
-}
-
-.description {
+  }
+  
+  .view-projects-btn:hover {
+    background-color: #703D57;
+  }
+  
+  .description {
     grid-area: description;
     margin-top: 1rem;
-}
-
-
-
-/* Footer */
-footer {
+  }
+  /*project grids for other pages*/
+  .grid-project-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 10px auto;
+    width: 90%;
+  
+  }
+  #web-grid-project-section {
+    grid-template-columns: repeat(2, 1fr); /* Override to 2 columns */
+  }
+  
+  .grid-item {
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px black;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition */
+  
+  
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .grid-item:hover {
+    transform: scale(.95); /* Scale up by 10% */
+  }
+  
+  /* Modal */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Black with opacity */
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  .modal-content, .close {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #caption {
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 769px) {
+    #graphic-grid-project-section {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 768px) {
+    .grid-project-section, #web-grid-project-section { 
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid-project-section, #web-grid-project-section {
+        grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Footer */
+  footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 20px 0;
-}
-
-.social-links a {
+  }
+  
+  .social-links a {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
-}
-
-.social-links a:hover {
+  }
+  
+  .social-links a:hover {
     text-decoration: underline;
-}
-
-/* Responsive Design */
-
-
-/*animation*/
-@keyframes fadeInFromBottom {
+  }
+  
+  /* Responsive Design */
+  /*animation*/
+  @keyframes fadeInFromBottom {
     from {
-        transform: translateY(100%); /* Start from below the viewport */
-        opacity: 0; /* Optional: Start with hidden */
+      transform: translateY(100%); /* Start from below the viewport */
+      opacity: 0; /* Optional: Start with hidden */
     }
     to {
-        transform: translateY(0); /* End at its normal position */
-        opacity: 1; /* Optional: End fully visible */
+      transform: translateY(0); /* End at its normal position */
+      opacity: 1; /* Optional: End fully visible */
     }
-}
-
-@media (max-width: 1270px) {
-
+  }
+  @media (max-width: 1270px) {
     .projects, .intro, .hero h1 {
-        width: 90%;
-
+      width: 90%;
     }
-
-}
-@media (max-width: 768px) {
+  }
+  @media (max-width: 768px) {
     .nav-links li {
-        display: block;
-        margin-left: 0;
-        margin-bottom: 10px;
+      display: block;
+      margin-left: 0;
+      margin-bottom: 10px;
     }
-
     .nav-links {
-        text-align: center;
+      text-align: center;
     }
-    
-}
+  }/*# sourceMappingURL=styles.css.map */

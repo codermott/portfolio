@@ -1,21 +1,28 @@
+/* Navbar styles */
 .navbar {
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Stick to the top of the viewport */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background-color: #333;
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
+/* Logo styles */
 .logo a {
     color: #fff;
     text-decoration: none;
     font-size: 24px;
 }
 
+/* Hamburger menu styles */
 .hamburger-menu {
     position: relative;
 }
 
+/* Menu button styles */
 .menu__btn {
     cursor: pointer;
     display: flex;
@@ -36,6 +43,7 @@
     transition: all 0.3s ease;
 }
 
+/* Menu box styles */
 .menu__box {
     position: fixed;
     top: 0;
@@ -85,4 +93,14 @@
 
 #menu__toggle:checked ~ .menu__btn span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Add margin or padding to avoid overlap with sticky navbar */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-top: 60px; /* Adjust based on the height of your navbar */
 }
