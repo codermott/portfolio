@@ -1,0 +1,88 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.hamburger-menu {
+    position: relative;
+}
+
+.menu__btn {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    position: relative;
+    z-index: 3; /* Ensure the button stays on top */
+}
+
+.menu__btn span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu__box {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hide the menu initially */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    list-style: none;
+    padding: 60px 20px 20px;
+    margin: 0;
+    transition: right 0.3s ease;
+    z-index: 2; /* Ensure the menu is behind the button */
+}
+
+.menu__box li {
+    margin: 20px 0;
+}
+
+.menu__box a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.menu__box a:hover {
+    color: #ff6347; /* Example hover color */
+}
+
+/* Toggle button effect */
+#menu__toggle {
+    display: none;
+}
+
+#menu__toggle:checked ~ .menu__box {
+    right: 0; /* Slide in the menu */
+}
+
+#menu__toggle:checked ~ .menu__btn span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu__toggle:checked ~ .menu__btn span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}

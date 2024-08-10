@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">OdermottStudios</div>
-        <ul class="nav-links">
-            <li><a href="websites.html">Web Projects</a></li>
-            <li><a href="graphicdesignprojects.html">Graphic Design Projects</a></li>
-        </ul>
-    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML('afterbegin', data);
+                })
+                .catch(error => console.error('Error loading navigation bar:', error));
+        });
+    </script>
 
     <header class="hero">
         <canvas id="polygon-canvas"></canvas>

@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chase Odermott Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav>
-        <div class="logo"><a href="index.html">OdermottStudios</a></div>
-        <ul class="nav-links">
-            <li><a href="websites.html">Web Projects</a></li>
-            <!--<li><a href="codingprojects.html">Coding Projects</a></li>-->
-            <li><a href="graphicdesignprojects.html">Logo Design Projects</a></li>
-        </ul>
-    </nav>
+     
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                fetch('navbar.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.body.insertAdjacentHTML('afterbegin', data);
+                    })
+                    .catch(error => console.error('Error loading navigation bar:', error));
+            });
+        </script>
         <!-- Hero Section -->
         <header class="hero">
             <canvas id="polygon-canvas"></canvas>
