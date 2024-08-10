@@ -282,13 +282,13 @@ header#secondary-hero {
   }
 }
 @media (max-width: 768px) {
-  .grid-project-section {
+  .grid-project-section, #web-grid-project-section { 
       grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
-  .grid-project-section {
+  .grid-project-section, #web-grid-project-section {
       grid-template-columns: 1fr;
   }
 }
