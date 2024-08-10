@@ -104,3 +104,20 @@ document.addEventListener('DOMContentLoaded', () => {
     projects.forEach(project => observer.observe(project));
     info.forEach(info => observer.observe(info));
 });
+
+/*img pop up*/
+
+function openModal(image) {
+    const modal = document.getElementById("myModal");
+    const modalImg = document.getElementById("imgModal");
+    const captionText = document.getElementById("caption");
+
+    modal.style.display = "block";
+    modalImg.src = image.src;
+    captionText.innerHTML = image.alt;
+}
+
+function closeModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
