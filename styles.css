@@ -74,6 +74,9 @@ nav {
 .hero h1 {
   max-width: 1000px;
 }
+header#secondary-hero {
+  min-height: 40vh !important;
+}
 
 /* Canvas for Polygons */
 #polygon-canvas {
@@ -117,6 +120,7 @@ nav {
   padding-top: 4em;
   color: white;
   margin: auto;
+  padding-bottom: 2rem;
 }
 
 .project-section h2 {
@@ -132,7 +136,6 @@ nav {
   grid-template-areas: "title button" "description description";
   max-width: 1000px;
   margin: auto;
-  margin-bottom: 2vw;
   border-bottom: 2px solid rgb(252, 163, 17);
   opacity: 0; /* Start as invisible */
   transform: translateY(50px); /* Start slightly below */
@@ -150,6 +153,9 @@ nav {
   align-self: center; /* Centers vertically if needed */
   color: rgb(252, 163, 17);
 }
+#web-projects {
+  margin-bottom: 2rem;
+}
 
 .view-projects-btn {
   width: 150px;
@@ -166,7 +172,6 @@ nav {
   border-radius: 2em;
   text-align: center;
   align-content: center;
-  margin: auto;
 }
 
 .view-projects-btn:hover {
@@ -180,9 +185,14 @@ nav {
 /*project grids for other pages*/
 .grid-project-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  margin: 10px;
+  margin: 10px auto;
+  width: 90%;
+
+}
+#web-grid-project-section {
+  grid-template-columns: repeat(2, 1fr); /* Override to 2 columns */
 }
 
 .grid-item {
@@ -191,6 +201,7 @@ nav {
   box-shadow: 0 4px 6px black;
   cursor: pointer;
   transition: transform 0.3s ease; /* Smooth transition */
+
 
 }
 
@@ -260,8 +271,8 @@ nav {
 
 /* Media Queries */
 @media (min-width: 769px) {
-  .grid-project-section {
-      grid-template-columns: repeat(3, 1fr);
+  #graphic-grid-project-section {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 768px) {
