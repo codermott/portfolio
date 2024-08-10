@@ -177,6 +177,23 @@ nav {
   grid-area: description;
   margin-top: 1rem;
 }
+/*project grids for other pages*/
+.grid-project-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px; /* Adjust the gap between items as needed */
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+.grid-item img {
+  max-width: 300px;
+}
 
 /* Footer */
 footer {
