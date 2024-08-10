@@ -35,23 +35,38 @@
     <section id="web-grid-project-section" class="grid-project-section">
 
         <a class="grid-item" href="https://www.vorpenergy.com/">
-            <img src="imgs\Screenshot 2024-08-10 113424.png" alt="Example Website Preview">
+            <img src="imgs\Screenshot 2024-08-10 113424.png" alt="Vorp Energy Previe">
+        </a>
+        <a class="grid-item" href="https://icchelps.com/">
+            <img src="imgs\Screenshot 2024-08-10 132920.png" alt="ICC Preview">
+        </a>
+        <a class="grid-item" href="https://www.gotruenorth.com/">
+            <img src="imgs\Screenshot 2024-08-10 132902.png" alt="True North Preview">
+        </a>
+        <a class="grid-item" href="https://rumseycr.com/">
+            <img src="imgs\Screenshot 2024-08-10 132843.png" alt="Rumsey Preview">
+        </a>
+        <a class="grid-item" href="https://www.1tomplumber.com/">
+            <img src="imgs\Screenshot 2024-08-10 132824.png" alt="1TomPlumber Preview">
         </a>
         <a class="grid-item" href="https://codermott.github.io/atomicsite/">
-            <img src="imgs\Screenshot 2024-08-10 113409.png" alt="Example Website Preview">
+            <img src="imgs\Screenshot 2024-08-10 113409.png" alt="Atomic Site Preview">
         </a>
 
        
 
     </section>
 
-    <footer>
-        <p>&copy; 2024 Chase Odermott. All Rights Reserved.</p>
-        <div class="social-links">
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-        </div>
-    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML('beforeend', data);
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
 
     <script src="script.js"></script>
     
