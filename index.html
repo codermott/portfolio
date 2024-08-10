@@ -9,54 +9,54 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-     
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                fetch('navbar.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.body.insertAdjacentHTML('afterbegin', data);
-                    })
-                    .catch(error => console.error('Error loading navigation bar:', error));
-            });
-        </script>
-        <!-- Hero Section -->
-        <header class="hero">
-            <canvas id="polygon-canvas"></canvas>
-            <h1>Odermott Studios</h1>
-            <h3>I'm a Web Designer/Front-End Developer based in Idaho</h3>
-        </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML('afterbegin', data);
+                })
+                .catch(error => console.error('Error loading navigation bar:', error));
+        });
+    </script>
+    
+    <!-- Hero Section -->
+    <header class="hero">
+        <canvas id="polygon-canvas"></canvas>
+        <h1>Odermott Studios</h1>
+        <h3>I'm a Web Designer/Front-End Developer based in Idaho</h3>
+    </header>
 
-        <section class="intro">
-            <h2>Hello, I'm Chase</h2>
-            <div class="info">
-                <h3 class="info">Web design, front-end development, and logo design is what I do.</h3>
-                <p class="info">Living in Idaho, I spend most of my time assembling websites/pages, building code projects, fine tuning WordPress sites for small business and entrepreneurs since 2022.</p>
-            </div>
+    <section class="intro">
+        <h2>Hello, I'm Chase</h2>
+        <div class="info">
+            <h3 class="info">Web design, front-end development, and logo design is what I do.</h3>
+            <p class="info">Living in Idaho, I spend most of my time assembling websites/pages, building code projects, fine-tuning WordPress sites for small businesses and entrepreneurs since 2022.</p>
+        </div>
+    </section>
+
+    <section class="project-section">
+        <h2>Check Out My Work</h2>
+
+        <section id="web-projects" class="projects">
+            <h3>Website Projects</h3>
+            <a href="websites.html" class="view-projects-btn">View Projects</a>
+            <p class="description">I approach websites from both a design and a business perspective. I dedicate ample time to research, plan, and design giving your website a more impactful presence.</p>
         </section>
 
-        <section class="project-section">
-            <h2>Check Out My Work</h2>
+        <!--<section id="coding-projects" class="projects">
+            <h3>Coding Projects</h3>
+            <a href="codingprojects.html" class="view-projects-btn">View Projects</a>
+            <p class="description">Putting my skills to the test, I have challenged myself through coding projects to push myself further, hoping to obtain a better understanding.</p>
+        </section>-->
 
-            <section id="web-projects" class="projects">
-                <h3>Website Projects</h3>
-                <a href="websites.html" class="view-projects-btn">View Projects</a>
-                <p class="description">I approach websites from both a design and a business perspective. I dedicate ample time to research, plan and design giving your website a more impactful presence.</p>
-            </section>
-
-            <!--<section id="coding-projects" class="projects">
-                <h3>Coding Projects</h3>
-                <a href="codingprojects.html" class="view-projects-btn">View Projects</a>
-                <p class="description">Putting my skills to the test, I have challenged myself thorugh coding projects to push myself further. in hopes to obtain a better understanding.</p>
-            </section>-->
-
-            <section id="grraphic-projects" class="projects">
-                <h3>Logo Projects</h3>
-                <a href="graphicdesignprojects.html" class="view-projects-btn">View Projects</a>
-                <p class="description">Your graphics should be a well-crafted, accurate representation of your brand. When designing, I collaborate with my clients to achieve results that are both timeless and versatile.</p>
-            </section>
-
+        <section id="graphic-projects" class="projects">
+            <h3>Logo Projects</h3>
+            <a href="graphicdesignprojects.html" class="view-projects-btn">View Projects</a>
+            <p class="description">Your graphics should be a well-crafted, accurate representation of your brand. When designing, I collaborate with my clients to achieve results that are both timeless and versatile.</p>
         </section>
+    </section>
+
     <!-- Footer -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
