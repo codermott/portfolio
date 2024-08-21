@@ -97,7 +97,8 @@ header#secondary-hero {
 
 /* Hero Text Content */
 .hero h1,
-.hero p {
+.hero p,
+.hero h3 {
   z-index: 1;
 }
 
