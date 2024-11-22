@@ -13,7 +13,7 @@
     <!-- Navigation Bar -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('/pages/navbar.html')
+            fetch('navbar.html')
                 .then(response => response.text())
                 .then(data => {
                     document.body.insertAdjacentHTML('afterbegin', data);
@@ -42,19 +42,19 @@
 
         <section id="web-projects" class="projects">
             <h3>Website Projects</h3>
-            <a href="/pages/websites.html" class="view-projects-btn">View Projects</a>
+            <a href="websites.html" class="view-projects-btn">View Projects</a>
             <p class="description">I approach websites from both a design and a business perspective. I dedicate ample time to research, plan, and design giving your website a more impactful presence.</p>
         </section>
 
         <section id="SEOprojects" class="projects">
             <h3>SEO Projects</h3>
-            <a href="/pages/seoprojects.html" class="view-projects-btn">View Projects</a>
+            <a href="seoprojects.html" class="view-projects-btn">View Projects</a>
             <p class="description">I focus on creating and implementing SEO strategies that improve rankings, increase organic traffic, and boost engagement metrics. Each project is backed by thorough analysis and measurable results.</p>
         </section>
 
         <section id="graphic-projects" class="projects">
             <h3>Logo Projects</h3>
-            <a href="/pages/logos.html" class="view-projects-btn">View Projects</a>
+            <a href="logos.html" class="view-projects-btn">View Projects</a>
             <p class="description">Your graphics should be a well-crafted, accurate representation of your brand. When designing, I collaborate with my clients to achieve results that are both timeless and versatile.</p>
         </section>
     </section>
@@ -62,7 +62,7 @@
     <!-- Footer -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('/pages/footer.html')
+            fetch('footer.html')
                 .then(response => response.text())
                 .then(data => {
                     document.body.insertAdjacentHTML('beforeend', data);

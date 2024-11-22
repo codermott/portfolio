@@ -11,7 +11,7 @@
 <body>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('/pages/navbar.html')
+            fetch('navbar.html')
                 .then(response => response.text())
                 .then(data => {
                     document.body.insertAdjacentHTML('afterbegin', data);
@@ -52,7 +52,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('/pages/footer.html')
+            fetch('footer.html')
                 .then(response => response.text())
                 .then(data => {
                     document.body.insertAdjacentHTML('beforeend', data);
