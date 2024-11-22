@@ -9,8 +9,8 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: white;
+  color: #0F2027;
 }
 
 h1 {
@@ -38,8 +38,8 @@ nav {
   display: flex;
   justify-content: right;
   align-items: center;
-  background-color: #333;
-  color: #fff;
+  background-color: #0F2027;
+  color: white;
   padding: 1rem;
 }
 
@@ -53,12 +53,12 @@ nav {
 }
 
 .nav-links a {
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
 
 .logo a {
-  color: #fff; /* Set text color to white */
+  color: white; /* Set text color to white */
   text-decoration: none; /* Remove underline from the link */
   font-weight: bold; /* Optional: make the text bold */
 }
@@ -71,7 +71,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: white;
   text-align: center;
   overflow: hidden;
   background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
@@ -97,8 +97,7 @@ header#secondary-hero {
 
 /* Hero Text Content */
 .hero h1,
-.hero p,
-.hero h3 {
+.hero p {
   z-index: 1;
 }
 
@@ -166,6 +165,10 @@ header#secondary-hero {
   margin-bottom: 2rem;
 }
 
+#SEOprojects {
+  margin-bottom: 2rem;
+}
+
 .view-projects-btn {
   width: 150px;
   height: 6vh;
@@ -173,7 +176,7 @@ header#secondary-hero {
   justify-self: end; /* Aligns the button to the right within its grid cell */
   display: inline-block;
   background-color: #203A43;
-  color: #ffffff;
+  color: white;
   border: none;
   padding: 0.5em;
   cursor: pointer;
@@ -262,7 +265,7 @@ header#secondary-hero {
   position: absolute;
   top: 15px;
   right: 35px;
-  color: #fff;
+  color: white;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
@@ -300,14 +303,14 @@ header#secondary-hero {
 }
 /* Footer */
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #0F2027;
+  color: white;
   text-align: center;
   padding: 20px 0;
 }
 
 .social-links a {
-  color: #fff;
+  color: white;
   margin: 0 10px;
   text-decoration: none;
 }
@@ -342,4 +345,46 @@ footer {
   .nav-links {
     text-align: center;
   }
-} /*# sourceMappingURL=styles.css.map */
+} 
+.seogrid {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.seogrid img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.seogrid:hover img {
+  transform: scale(1.05);
+}
+
+.seogrid::after {
+  content: "Ongoing";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.grid-item:hover::after {
+  opacity: 1;
+}/*# sourceMappingURL=styles.css.map */

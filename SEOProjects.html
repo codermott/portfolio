@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML('afterbegin', data);
+                })
+                .catch(error => console.error('Error loading navigation bar:', error));
+        });
+    </script>
+
+    <header id="secondary-hero" class="hero">
+        <canvas id="polygon-canvas"></canvas>
+        <h1>SEO Projects</h1>
+    </header>
+
+    <section id="web-grid-project-section" class="grid-project-section">
+        <a class="grid-item seogrid" href="https://www.basspro.com/shop/en" target="_blank">
+            <div class="overlay-container">
+                <img src="imgs/Screenshot 2024-11-21 201709.png" alt="Bass Pro Site">
+                
+            </div>
+        </a>
+        <a class="grid-item seogrid" href="https://www.cabelas.com/shop/en" target="_blank">
+            <div class="overlay-container ">
+                <img src="imgs/Screenshot 2024-11-21 201951.png" alt="Cabelas Site">
+            </div>
+        </a>
+    </section>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML('beforeend', data);
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
